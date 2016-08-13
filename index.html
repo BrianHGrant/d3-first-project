@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="build/css/styles.css">
+    <title>D3 tutorial</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      d3.select("body").selectAll("p")
+        .data(dataset)
+        .enter()
+        .append('p')
+        .text("New paragraph!");
+    </script>
+    <p>New paragraph!</p>
+  </body>
+</html>
