@@ -8,9 +8,11 @@
   </head>
   <body>
     <script type="text/javascript">
-    var dataset = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
-                14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
-                24, 18, 25, 9, 3  ];
+    var dataset = [];
+    for(var i = 0; i < 25; i++) {
+      var newNumber = Math.random() * 30;
+      dataset.push(newNumber);
+    }
 
       d3.select("body").selectAll("div")
         .data(dataset)
@@ -22,5 +24,17 @@
           return barheight + "px";
         });
     </script>
+    <svg width="500" height="50">
+      <circle cx="25" cy="25" r="20"
+              fill="rgba(128, 0, 128, 0.75)"
+              stroke="rgba(0, 255, 0, 0.25)" stroke-width="10"/>
+      <circle cx="75" cy="25" r="20"
+              fill="rgba(0, 255, 0, 0.75)"
+              stroke="rgba(0, 0, 255, 0.25)" stroke-width="10"/>
+      <circle cx="125" cy="25" r="20"
+              fill="rgba(255, 255, 0, 0.75)"
+              stroke="rgba(255, 0, 0, 0.25)" stroke-width="10"/>
+    </svg>
+    <p>Hello</p>
   </body>
 </html>
